@@ -34,7 +34,7 @@ close terminal
 open new terminal
 
 ```shell
-cd ~/hdmapping-benchmark/mola_lidar_odometry-to-HDMapping
+cd ~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping
 chmod +x docker_session_run-ros2-mola.sh
 cd ~/hdmapping-benchmark/data
 ~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping/docker_session_run-ros2-mola.sh reg-1-ros2 .
