@@ -34,10 +34,10 @@ close terminal
 open new terminal
 
 ```shell
-cd ~/hdmapping-benchmark/benchmark-MOLA-to-HDMapping
+cd ~/hdmapping-benchmark/mola_lidar_odometry-to-HDMapping
 chmod +x docker_session_run-ros2-mola.sh
 cd ~/hdmapping-benchmark/data
-~/hdmapping-benchmark/benchmark-MOLA-to-HDMapping/docker_session_run-ros2-mola.sh reg-1-ros2 .
+~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping/docker_session_run-ros2-mola.sh reg-1-ros2 .
 ```
 
 ## Step 5 (Open and visualize data)
