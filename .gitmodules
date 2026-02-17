@@ -1,0 +1,24 @@
+[submodule "src/mola"]
+	path = src/mola
+	url = https://github.com/MOLAorg/mola.git
+[submodule "src/mola_common"]
+	path = src/mola_common
+	url = https://github.com/MOLAorg/mola_common.git
+[submodule "src/mola_gnss_to_markers"]
+	path = src/mola_gnss_to_markers
+	url = https://github.com/MOLAorg/mola_gnss_to_markers.git
+[submodule "src/mola_imu_preintegration"]
+	path = src/mola_imu_preintegration
+	url = https://github.com/MOLAorg/mola_imu_preintegration.git
+[submodule "src/mola_lidar_odometry"]
+	path = src/mola_lidar_odometry
+	url = https://github.com/MOLAorg/mola_lidar_odometry.git
+[submodule "src/mola_sm_loop_closure"]
+	path = src/mola_sm_loop_closure
+	url = https://github.com/MOLAorg/mola_sm_loop_closure.git
+[submodule "src/mola_state_estimation"]
+	path = src/mola_state_estimation
+	url = https://github.com/MOLAorg/mola_state_estimation.git
+[submodule "src/mp2p_icp"]
+	path = src/mp2p_icp
+	url = https://github.com/MOLAorg/mp2p_icp.git
