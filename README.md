@@ -1,4 +1,4 @@
-# [mola_lidar_odometry]([https://github.com/93won/lidar_odometry_ros_wrapper](https://github.com/MOLAorg/mola_lidar_odometry)](https://github.com/MOLAorg/mola_lidar_odometry)) converter to [HDMapping](https://github.com/MapsHD/HDMapping)
+# [mola_lidar_odometry](https://github.com/MOLAorg/mola_lidar_odometry) converter to [HDMapping](https://github.com/MapsHD/HDMapping)
 
 ## Hint
 
