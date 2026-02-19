@@ -78,7 +78,7 @@ export MOLA_LO_PUBLISH_DESKEWED_SCANS=true
 ros2 launch mola_lidar_odometry ros2-lidar-odometry.launch.py \
   lidar_topic_name:=/livox/pointcloud \
   imu_topic_name:=/livox/imu \
-  use_rviz:=False use_mola_gui:=False \
+  use_rviz:=True use_mola_gui:=False \
   ignore_lidar_pose_from_tf:=true ignore_imu_pose_from_tf:=true
 '\'' C-m
 
