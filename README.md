@@ -25,7 +25,7 @@ We now convert data from ROS1 to ROS2
 ```shell
 docker run -it -v ~/hdmapping-benchmark/data:/data --user 1000:1000 mola_humble /bin/bash
 cd /data
-rosbags-convert --src reg-1.bag-pc.bag --dst reg-1-ros2
+rosbags-convert --src reg-1.bag-pc.bag --dst reg-1-ros2-mola
 ```
 
 close terminal
@@ -37,7 +37,7 @@ open new terminal
 cd ~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping
 chmod +x docker_session_run-ros2-mola.sh
 cd ~/hdmapping-benchmark/data
-~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping/docker_session_run-ros2-mola.sh reg-1-ros2 .
+~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping/docker_session_run-ros2-mola.sh reg-1-ros2-mola .
 ```
 
 ## Step 5 (Open and visualize data)
