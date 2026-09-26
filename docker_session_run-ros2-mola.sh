@@ -71,6 +71,10 @@ docker run -it --rm \
     tmux new-session -d -s '"$TMUX_SESSION"'
 
     # ---------- PANEL 1: ROS2 launch ----------
+    # publish_localization_following_rep105:=False makes MOLA publish map -> base_link
+    # directly. With the default (True) it publishes only map -> odom and expects an
+    # external odom -> base_link on /tf, which the bag does not have, so the map frame
+    # never appears in RViz. The recorded pose topic does not depend on /tf.
     tmux send-keys -t '"$TMUX_SESSION"' '\''sleep 5
 source /opt/ros/humble/setup.bash
 source /ros2_ws/install/setup.bash
@@ -79,7 +83,8 @@ ros2 launch mola_lidar_odometry ros2-lidar-odometry.launch.py \
   lidar_topic_name:=/livox/pointcloud \
   imu_topic_name:=/livox/imu \
   use_rviz:=True use_mola_gui:=False \
-  ignore_lidar_pose_from_tf:=true ignore_imu_pose_from_tf:=true
+  ignore_lidar_pose_from_tf:=true ignore_imu_pose_from_tf:=true \
+  publish_localization_following_rep105:=False
 '\'' C-m
 
     # ---------- PANEL 2: rosbag record ----------

@@ -19,13 +19,15 @@ git submodule update --init --recursive
 docker build -t mola_humble .
 ```
 
+The image installs MOLA from the ROS 2 Humble apt repository (3.2.0 at the time of writing); only the HDMapping converter in `src/mola-to-hdmapping` is built from source.
+
 ## Step 3 (Convert data)
-We now convert data from ROS1 to ROS2
+We now convert data from ROS1 to ROS2. Skip this step if `reg-1-ros2` already exists in '~/hdmapping-benchmark/data' (the benchmark orchestration creates the same folder).
 
 ```shell
 docker run -it -v ~/hdmapping-benchmark/data:/data --user 1000:1000 mola_humble /bin/bash
 cd /data
-rosbags-convert --src reg-1.bag-pc.bag --dst reg-1-ros2-mola
+rosbags-convert --src reg-1.bag-pc.bag --dst reg-1-ros2
 ```
 
 close terminal
@@ -37,7 +39,7 @@ open new terminal
 cd ~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping
 chmod +x docker_session_run-ros2-mola.sh
 cd ~/hdmapping-benchmark/data
-~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping/docker_session_run-ros2-mola.sh reg-1-ros2-mola .
+~/hdmapping-benchmark/benchmark-mola_lidar_odometry-to-HDMapping/docker_session_run-ros2-mola.sh reg-1-ros2 .
 ```
 
 ## Step 5 (Open and visualize data)
